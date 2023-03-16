@@ -2,24 +2,28 @@ import React, { useState } from 'react'
 import '../styles/App.css';
 
 function ToDo( {todoId, createdAt}) {
-  return (<tr>
+  return ( 
+    <tr>
     <td>
       <p>{todoId}</p>
     </td>
     <td>
-      <input placeholder='public your task'/>
+      <input placeholder="Enter your task"/>
     </td>
     <td>
       <p>{createdAt}</p>
     </td>
-  </tr>)
+  </tr>
+  );
 }
 
 function App() {
-  const [todos, setTodos] = useState([{
+  const [todos, setTodos] = useState([
+    {
     id: 'todo1',
     createdAt: '20:30',
-  }, {
+  },
+   {
     id: 'todo2',
     createdAt: '18:00',
   }
